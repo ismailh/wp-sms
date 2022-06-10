@@ -208,15 +208,16 @@
                                             <input type="number" name="wpsms_repeat-interval" id="repeat-interval" min=1
                                                 value=1>
                                             <select name="wpsms_repeat-interval-unit" id="repeat-interval-unit">
+                                                <option value="minute"><?php _e('Minute', 'wp-sms') ?>
+                                                </option>
+                                                <option value="hour"><?php _e('Hour', 'wp-sms') ?>
+                                                </option>
                                                 <option value="day"><?php _e('Day', 'wp-sms') ?>
                                                 </option>
-                                                <option value="week"><?php _e('Week', 'wp-sms') ?>
-                                                </option>
-                                                <option value="month"><?php _e('Month', 'wp-sms') ?>
-                                                </option>
-                                                <option value="year"><?php _e('Year', 'wp-sms') ?>
+                                                <option value="week"><?php _e('week', 'wp-sms') ?>
                                                 </option>
                                             </select>
+                                            <span>Time frames are shrunken for testing purposes!</span>
                                         </td>
                                     </tr>
                                     <tr class="repeat-subfield" valign="top">
@@ -238,7 +239,8 @@
                                         <td style="padding-top: 10px;">
                                             <input type="checkbox" id="schedule_status" name="schedule_status"
                                                 disabled="disabled" />
-                                            <p class="wpsms-error-notice" style="padding: 4px 4px;"><?php echo sprintf('Requires <a href="%s" target="_blank">Pro Pack!</a>', WP_SMS_SITE . '/buy'); ?></p>
+                                            <p class="wpsms-error-notice" style="padding: 4px 4px;"><?php echo sprintf('Requires <a href="%s" target="_blank">Pro Pack!</a>', WP_SMS_SITE . '/buy'); ?>
+                                            </p>
                                         </td>
                                     </tr>
                                     <tr valign="top">
@@ -248,7 +250,8 @@
                                         <td style="padding-top: 10px;">
                                             <input type="checkbox" id="repeat_status" name="repeat_status"
                                                 disabled="disabled" />
-                                            <p class="wpsms-error-notice" style="padding: 4px 4px;"><?php echo sprintf('Requires <a href="%s" target="_blank">Pro Pack!</a>', WP_SMS_SITE . '/buy'); ?></p>
+                                            <p class="wpsms-error-notice" style="padding: 4px 4px;"><?php echo sprintf('Requires <a href="%s" target="_blank">Pro Pack!</a>', WP_SMS_SITE . '/buy'); ?>
+                                            </p>
                                         </td>
                                     </tr>
                                     <?php endif; ?>
