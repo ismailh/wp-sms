@@ -1635,6 +1635,33 @@ class Settings
                     'desc'    => __('Please enter your Bitly Access token here, you can get it from <a href="https://app.bitly.com/settings/api/">https://app.bitly.com/settings/api/</a>', 'wp-sms'),
                     'readonly' => !$this->proIsInstalled
                 ),
+                'g_recaptcha'                                 => array(
+                    'id'   => 'g_recaptcha',
+                    'name' => __('Google recaptcha', 'wp-sms'),
+                    'type' => 'header',
+                ),
+                'g_recaptcha_status'                          => array(
+                    'id'      => 'g_recaptcha_status',
+                    'name'    => __('Activate', 'wp-sms'),
+                    'type'    => 'checkbox',
+                    'options' => $options,
+                    'desc'    => __('By enabling this option, google recaptcha v2 will be added to request-sms actions.', 'wp-sms'),
+                    'readonly' => !$this->proIsInstalled
+                ),
+                'g_recaptcha_site_key'                          => array(
+                    'id'      => 'g_recaptcha_site_key',
+                    'name'    => __('Site Key', 'wp-sms'),
+                    'type'    => 'text',
+                    'desc'    => __('Please enter your v2 recaptcha site key here, <a href="http://www.google.com/recaptcha/admin">http://www.google.com/recaptcha/admin</a>', 'wp-sms'),
+                    'readonly' => !$this->proIsInstalled
+                ),
+                'g_recaptcha_secret_key'                          => array(
+                    'id'      => 'g_recaptcha_secret_key',
+                    'name'    => __('Secret Key', 'wp-sms'),
+                    'type'    => 'text',
+                    'desc'    => __('Please enter your v2 recaptcha secret key here, <a href="http://www.google.com/recaptcha/admin">http://www.google.com/recaptcha/admin</a>', 'wp-sms'),
+                    'readonly' => !$this->proIsInstalled
+                ),
             )),
 
             /**
